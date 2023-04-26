@@ -8,34 +8,34 @@ export const store = new Vuex.Store({
         fruits: [
             {
               name: "Apple",
-              price: "240",
+              price: "250",
               quantity: "24",
             },
             {
               name: "Banana",
-              price: "240",
+              price: "150",
               quantity: "10",
             },
             {
               name: "Pineapple",
-              price: "240",
+              price: "440",
               quantity: "14",
             },
           ],
           vegetables: [
             {
               name: "Cocumber",
-              price: "140",
+              price: "40",
               quantity: "4",
             },
             {
               name: "Bittergourd",
-              price: "240",
+              price: "60",
               quantity: "11",
             },
             {
               name: "Tomatoes",
-              price: "240",
+              price: "90",
               quantity: "8",
             },
           ],
@@ -46,7 +46,8 @@ export const store = new Vuex.Store({
           let  salefruits = state.fruits.map(fruit =>{
             return{
                 name:'**' + fruit.name + '**',
-                price : fruit.price/2
+                price : fruit.price/2,
+                quantity:fruit.quantity
             }
           });
           return salefruits;
@@ -56,7 +57,8 @@ export const store = new Vuex.Store({
           let  salevegetable = state.vegetables.map(vegetable =>{
             return{
                 name:'**' + vegetable.name + '**',
-                price : vegetable.price/2
+                price : vegetable.price/2,
+                quantity:vegetable.quantity
             }
           });
           return salevegetable;

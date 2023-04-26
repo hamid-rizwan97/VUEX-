@@ -85,7 +85,7 @@
   }
   .price {
     font-weight: bold;
-    color: #36f805;
+    color: #267e10;
   }
   h1{
     text-align: center;
