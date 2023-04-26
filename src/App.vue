@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <productOne></productOne>
+    <productTwo></productTwo>
+    <saleProducts></saleProducts>
+    <salevegetable></salevegetable>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import productOne from "./components/productOne.vue";
+import productTwo from "./components/productTwo.vue";
+import saleProducts from "./components/saleProducts.vue";
+import salevegetable from "./components/salevegetable.vue";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    productOne: productOne,
+    productTwo: productTwo,
+    saleProducts:saleProducts,
+    salevegetable:salevegetable
+  },
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: grey;
 }
 </style>
