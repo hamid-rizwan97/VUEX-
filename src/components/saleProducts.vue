@@ -1,6 +1,14 @@
 <template>
   <div class="product_two">
-    <h1 v-local-highlight:foreground.delayed.blink="{initialColor:'red' , secondarycolor:'salmon' , delay:700 }">Fruit Sale</h1>
+    <h1
+      v-local-highlight:foreground.delayed.blink="{
+        initialColor: 'red',
+        secondarycolor: 'salmon',
+        delay: 700,
+      }"
+    >
+      Fruit Sale
+    </h1>
     <ul>
       <li v-for="fruit in salefruits">
         <span class="name">
@@ -20,6 +28,7 @@
         <br />
       </li>
     </ul>
+    <button @click="reducePricefruits">Reduce Prices</button>
   </div>
 </template>
 <script>
@@ -53,12 +62,16 @@ export default {
   },
   computed: {
     fruits() {
-        return this.$store.state.fruits
+      return this.$store.state.fruits;
     },
-    salefruits()
-    {
-       return this.$store.getters.salefruits
-    }
+    salefruits() {
+      return this.$store.getters.salefruits;
+    },
+  },
+  methods: {
+    reducePricefruits() {
+      this.$store.commit("reducePricefruits");
+    },
   },
   data() {
     return {};
@@ -73,7 +86,7 @@ export default {
   padding: 10px 20px;
 }
 .product_two ul {
-text-align: center;
+  text-align: center;
   padding: 0;
 }
 .product_two li {
@@ -87,9 +100,9 @@ text-align: center;
   font-weight: bold;
   color: #f80505;
 }
-h1{
+h1 {
   text-align: center;
   font-weight: bolder;
-  font-size: 100px;
+  font-size: 40px;
 }
 </style>
